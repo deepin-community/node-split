@@ -1,0 +1,27 @@
+Source: node-split
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Jérémy Lal <kapouer@melix.org>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-through <!nocheck>
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/js-team/node-split
+Vcs-Git: https://salsa.debian.org/js-team/node-split.git
+Homepage: https://github.com/dominictarr/split
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-split
+Architecture: all
+Depends: ${misc:Depends}
+ , node-through
+Multi-Arch: foreign
+Description: split a Text Stream into a Line Stream
+ This Node.js module breaks up a stream and reassembles it so that
+ each line is a chunk passed to the stream data event.
+ It accepts the same arguments as String.split: a string or a
+ regular expression - the optional limit parameter being ignored.
+ .
+ Node.js is an event-based server-side JavaScript engine.
